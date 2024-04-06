@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Edu NSW ACT Foundation", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body{
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+/*Cabecera*/
+.cubo {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    width: 5em;
+    height: 5em;
+    border-radius: 20px;
+    background-image: url("./Maxi/IMG-20240208-WA0052.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation-name: example;
+    animation-duration: 6s;
+    animation-iteration-count: 50;
+    position: relative;
+    animation-delay: 1s;
+}
+
+
+@keyframes example {
+    0%   {background-color:red; left:10em; top:0em;}
+    25%  {background-color:yellow; left:45em; top:0em;}
+    50%  {background-color:blue; left:45em; top:10em;}
+    75%  {background-color:green; left:10em; top:10em;}
+    100% {background-color:red; left:10em; top:0em;}
+}
+
+
+
+
+/************ CONTENEDOR ***********/
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(5, auto);
+
+	grid-template-areas: "header header header"
+						 "contenido contenido sidebar"
+						 "widget-1 widget-1 sidebar"
+                         "widget-2 widget-2 sidebar"
+						 "footer footer footer";
+}
+
+/****************letras****************/
+h3{
+    display: none;
+}
+
+.title{  
+    animation: heartBeat;
+    animation-duration: 4s;
+}
+
+h1, h4, h3 {
+    font-family: "Licorice", cursive;
+    font-style: normal;
+    color: rgb(255, 0, 0);   
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(255, 255, 255);
+}
+
+h1{
+    font-size: 8em;
+}
+
+h3{
+    font-size: 4em;
+    Text-shadow: 3px 3px 3px rgb(255, 255, 255);
+}
+
+h4{ 
+    font-size: 4em;
+}
+
+p{
+    text-align: center;
+}
+/****************SECCIONES****************/
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+	background: #fff;
+	padding: 3em;
+	border-radius: 1em;
+}
+
+.contenedor .header {
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+	color: #fff;
+	grid-area: header;
+    padding: 0px;
+}
+
+.contenedor .contenido {
+	background-image: linear-gradient(to top, rgb(254, 173, 166) 0%, #f5efef 100%);
+	grid-area: contenido;
+}
+
+.contenedor .sidebar {
+	grid-column: 3 / 4;
+	background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+	grid-area: sidebar;
+}
+
+.frases{
+    margin-bottom: 3em;
+    margin-top: 1em;
+    box-shadow: 0 0 60px -16px rgb(0, 0, 0);
+    border-radius: 1em;
+}
+.contenedor .widget-1 {
+	grid-area: widget-1;    
+}
+
+
+
+
+/**/
+
+.contenedor .widget-2 {
+	grid-area: widget-2;
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+}
+
+.contenedor .footer {
+	background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+	color: #fff;
+	grid-area: footer;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+	background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+	color: #fff;
+	height: 40em;
+	text-align: center;
+	
+}
+
+/*WIDGET1*/
+.contenedor .widget-1{ 
+    display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.2vw;
+}
+
+.playlist{
+    display: block;
+	align-items: center;
+	justify-content: center;
+}
+
+.contenedor .transparent{
+    border: solid black;
+    height: 15em;
+    width: 10em;   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* opacity: 0.5; */
+    border-radius: 2vw;
+    
+}
+
+.img1{    
+    background-image: url("./Maxi/Picsart_24-02-11_05-13-09-725.jpg");
+}
+
+.img2{    
+    background-image: url("./Maxi/Picsart_24-02-11_05-11-47-630.jpg");
+}
+
+.img3{    
+    background-image: url("./Maxi/Picsart_24-02-11_12-00-20-192.jpg");
+}
+
+.img4{    
+    background-image: url("./Maxi/B612_20240211_021659_026.jpg");
+}
+
+
+.transparent:hover{
+    
+    h3{
+        display: block;
+    } 
+
+}
+
+
+
+.d-block{
+    border-radius: 3vw;
+    border: solid black;
+}
+
+
+
+/*SIDEBAR*/
+
+
+
+.cards {
+    display: block;
+    justify-content: center;
+    align-items: center;  
+}
+
+.card {
+    width: 25em;
+    background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
+    border-radius: 3vw;
+    border: none;
+}
+
+audio{
+    border-radius: 1em;
+    width: 23em;
+}
+
+.card:hover{
+    border: none;
+    border-radius: 80px; 
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    padding: 0px 0.5em;
+    margin: 0.5em 0px;
+    transition-property: all; 
+    transition-duration: 0.5s; 
+    transition-timing-function: ease-in; 
+}
+
+.nombreCancion{
+    font-size: 1.5em;
+}
+
+.carouse{
+    width: 5em;
+}
+
+
+
+@media screen and (max-width: 1500px){
+    .cubo{
+        display: none;
+    }
+	.contenedor {
+		grid-template-areas: "header header header"
+						 "contenido contenido contenido"
+						 "sidebar sidebar sidebar"
+						 "widget-1 widget-1 widget-1"
+						 "widget-2 widget-2 widget-2"
+						 "footer footer footer";
+	}
+    .contenedor .widget-1,
+    .contenedor .widget-2 {
+	background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+	color: #fff;
+	height: 45em;
+	text-align: center;
+	
+    }
+}
